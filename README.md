@@ -6,6 +6,10 @@ I like Ursina because I know Python very well and I'm going to add a bit of AI t
 
 The [Ursina Home Page](https://www.ursinaengine.org/index.html) and [Ursina API Reference](https://www.ursinaengine.org/api_reference.html) are pretty handy.  You'll also want to check out the [Ursina Coordinate System](https://www.ursinaengine.org/coordinate_system.html)
 
+There aren't many Python game engines, but [Panda3D](https://www.panda3d.org/) is pretty sophisticated.  I just don't need that much control right now.
+
+Ursina has an editor, but I haven't used it yet. It's really much more about scripting and simple games than anything else. I like the punk-rock nature of it, honestly.
+
 
 ## Virtual Environments
 
