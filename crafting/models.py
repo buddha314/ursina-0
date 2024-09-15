@@ -22,12 +22,6 @@ class Stone(Resource):
             model = load_model('assets/fbx/Simple_Rock.glb'),
             **kwargs)
 
-class HandAxe(Resource):
-    def __init__(self, **kwargs):
-        super().__init__(name='handaxe', 
-            model = load_model('assets/fbx/Hand_Axe.glb'),
-            **kwargs)
-
 class Recipe:
     def __init__(self, name, ingredients, product):
         self.name = name
@@ -52,5 +46,17 @@ class Recipe:
             return globals()[self.product]()
         else:
             return None
+"""
+Put all models in here to avoid circular imports
+"""
+
+class HandAxe(Resource):
+    def __init__(self, **kwargs):
+        super().__init__(name='handaxe', 
+            #model = load_model('assets/fbx/Hand_Axe.glb'),
+            model = 'cube',
+            **kwargs)
+
+HandAxeRecipe = Recipe('handaxe', ['wood', 'wood', 'stone'], 'HandAxe')
 
         
