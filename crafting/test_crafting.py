@@ -5,9 +5,11 @@ def test_crafting():
     Test the crafting module. Try the handaxe!
     """
 
-    ingredients = ['wood', 'wood', 'stone']
-    handaxe_recipe = Recipe('handaxe', ['wood', 'wood', 'stone'], 'handaxe')   
+    # Delcare a recipe for a handaxe
+    handaxe_recipe = Recipe('handaxe', ['wood', 'wood', 'stone'], 'HandAxe')   
+    # Send in correct ingredients
     handaxe = handaxe_recipe.craft(ingredients=['wood', 'wood', 'stone'])
-    assert handaxe == 'handaxe', "Should return handaxe with two wood and one stone"
+    assert isinstance(handaxe, HandAxe), "Should return handaxe with two wood and one stone"
+    # Send in incorrect ingredients
     handaxe = handaxe_recipe.craft(ingredients=['wood', 'stone'])
-    assert handaxe == 'handaxe', "Should not return handaxe with only one stone"
+    assert handaxe == None, "Should not return handaxe with only one wood"

@@ -22,6 +22,12 @@ class Stone(Resource):
             model = load_model('assets/fbx/Simple_Rock.glb'),
             **kwargs)
 
+class HandAxe(Resource):
+    def __init__(self, **kwargs):
+        super().__init__(name='handaxe', 
+            model = load_model('assets/fbx/Hand_Axe.glb'),
+            **kwargs)
+
 class Recipe:
     def __init__(self, name, ingredients, product):
         self.name = name
@@ -41,15 +47,10 @@ class Recipe:
             if ingredients.count(ing) < self.ingredients.count(ing):
                 print(f"Missing {ing}")
                 build = False
-
         if build:
-            return self.product
+            print (globals())
+            return globals()[self.product]()
         else:
             return None
 
-class HandAxe(Resource):
-    def __init__(self, **kwargs):
-        super().__init__(name='handaxe', 
-            model = load_model('assets/fbx/Hand_Axe.glb'),
-            **kwargs)
         

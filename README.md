@@ -49,3 +49,7 @@ python crafting_main.py
 ```
 
 I'm starting by creating basic resources in `crafting\models.py` folder. Right now I can't control the size of the models, so I'm working that up.
+
+## Testing
+
+You should be able to test things with `pytest`, but right now only the crafting system has some tests.  From the room run `pytest` and watch the magic happen.
