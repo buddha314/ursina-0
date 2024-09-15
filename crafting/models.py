@@ -27,3 +27,29 @@ class Recipe:
         self.name = name
         self.ingredients = ingredients
         self.product = product
+    
+    def craft(self, ingredients):
+        """
+        Send in some ingredients and get back the product if you have the right stuff
+        
+        ingredients: list of strings with duplicated
+        self.ingredients: dicitionary of string with minimum required amount
+        """
+        build = True
+        ingredients_set = set(self.ingredients)
+        for ing in ingredients_set:
+            if ingredients.count(ing) < self.ingredients.count(ing):
+                print(f"Missing {ing}")
+                build = False
+
+        if build:
+            return self.product
+        else:
+            return None
+
+class HandAxe(Resource):
+    def __init__(self, **kwargs):
+        super().__init__(name='handaxe', 
+            model = load_model('assets/fbx/Hand_Axe.glb'),
+            **kwargs)
+        
