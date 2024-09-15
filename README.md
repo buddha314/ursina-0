@@ -1,5 +1,12 @@
 # The Sequel to "Ursina Minus One"
 
+## Ursina
+
+I like Ursina because I know Python very well and I'm going to add a bit of AI to my games. Python is the de facto language of AI.
+
+The [Ursina Home Page](https://www.ursinaengine.org/index.html) and [Ursina API Reference](https://www.ursinaengine.org/api_reference.html) are pretty handy.  You'll also want to check out the [Ursina Coordinate System](https://www.ursinaengine.org/coordinate_system.html)
+
+
 ## Virtual Environments
 
 You can use either a python virtual environment or the docker image I included. The Docker image takes a bit more work, so start with the Python environment.
@@ -36,3 +43,5 @@ I'm only to the point where I'm bulding out the resources.  Most of the system i
 ```
 python crafting_main.py
 ```
+
+I'm starting by creating basic resources in `crafting\models.py` folder. Right now I can't control the size of the models, so I'm working that up.
