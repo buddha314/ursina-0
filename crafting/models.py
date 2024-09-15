@@ -42,7 +42,8 @@ class Recipe:
                 print(f"Missing {ing}")
                 build = False
         if build:
-            print (globals())
+            # Was here to check if the class exists in the global namespace
+            #print (globals())
             return globals()[self.product]()
         else:
             return None
