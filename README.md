@@ -28,3 +28,11 @@ pip install -r requirements.txt
 ```
 
 and it will download several packages.  You only need to run this again when the requirements file has been updated.
+
+## Crafting System
+
+I'm only to the point where I'm bulding out the resources.  Most of the system is in the `crafting` package.  To see where we are, try out
+
+```
+python crafting_main.py
+```
