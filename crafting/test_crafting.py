@@ -13,3 +13,6 @@ def test_crafting():
     # Send in incorrect ingredients
     handaxe = handaxe_recipe.craft(ingredients=['wood', 'stone'])
     assert handaxe == None, "Should not return handaxe with only one wood"
+    # Send in correct ingredients in different order
+    handaxe = handaxe_recipe.craft(ingredients=['wood', 'stone', 'stone', 'wood'])
+    assert isinstance(handaxe, HandAxe), "Should return handaxe with two wood and one stone in different order"
